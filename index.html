@@ -3,14 +3,20 @@
 <head>
     <meta charset="utf-8" />
     <title>JavaScript Breakout Clone</title>
-    <style>
-        * { padding: 0; margin: 0; } 
-        canvas { background: #eee; display: block; margin: 0 auto; }
-    </style>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
-<canvas id="myCanvas" width="480" height="320"></canvas>
+    <h1>JavaScript Breakout Game</h1>
+    <p>
+        <ul>The objoect of the game is to destroy all the blocks.</ul>
+        <ul>You start with 3 lives, but be careful the ball moves faster each time it hits the paddle.</ul>
+        <ul>Use either the keyboard or the mouse to move the paddle.</ul>
+    </p>
+
+    <h3>Good Luck</h3>
+    <canvas id="myCanvas" width="480" height="320"></canvas>
 
 <script>
     var canvas = document.getElementById("myCanvas");
