@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS Break Out Game</title>
+  <style type="text/css">
+    body {background: #ff98ff;}
+
+    canvas { background: #98ff98; border: 8px solid black; }
+
+  </style>
+</head>
+<body>
+  <canvas id="canvas" height="600px" width="800px"></canvas>
+
+  <script type="text/javascript">
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+    var x = canvas.width/2;
+    var y = canvas.height-30;
+    var dx = 2;
+    var dy = -2;
+    var ballRadius = 10;
+
+    function drawBall() {
+      ctx.beginPath();
+      ctx.arc(y, x, ballRadius, 0, Math.PI*2);
+      ctx.fillStyle = "black";
+      ctx.fill();
+      ctx.closePath();
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      drawBall();
+      x += dx,
+      y += dy;
+      if(x + dx > canvas.width || x + dx < 0) {
+      dx = -dx;
+    }
+
+      if(y + dy > canvas.height || y + dy < 0) {
+      dy = -dy;
+    }
+  }
+
+    setInterval(draw, 7);
+
+
+
+    
+   
+  </script>
+</body>
+</html>
